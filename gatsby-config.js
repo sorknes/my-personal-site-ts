@@ -5,12 +5,27 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `Knut Sorknes's personal site`,
+    description: `A short description...`,
+    author: {
+      name: `Knut Sorknes`,
+      url: `https://somedomain.com`,
+      email: `knut.sorknes@gmail.com`,
+    },
+    siteUrl: `https://somedomain.com`,
+    social: {
+      facebook: `Knut Sorknes`,
+      linkedin: `Knut Sorknes`,
+      instagram: `knutsorknes`,
+      twitter: `@knutsorknes`,
+    },
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        // Add any options here
+        displayName: true,
       },
     },
   ],

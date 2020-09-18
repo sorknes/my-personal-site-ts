@@ -1,12 +1,14 @@
 import * as React from "react"
 
+import Layout from "../components/Layout/Layout"
+
 import { token } from "../utils/tokens/index"
 
 export interface IProps {}
 
 const Home: React.FC<IProps> = () => {
   return (
-    <React.Fragment>
+    <Layout title="Home">
       <div
         style={{
           padding: token.space.component[2],
@@ -36,7 +38,7 @@ const Home: React.FC<IProps> = () => {
         }}>
         Hello world, blue!
       </div>
-    </React.Fragment>
+    </Layout>
   )
 }
 
