@@ -5,6 +5,7 @@
  */
 
 import borderRadius from "./border-radius"
+import colorBlue from "./color-blue"
 import colorNeutral from "./color-neutral"
 import colorOrange from "./color-orange"
 import spaceComponent from "./space-component"
@@ -15,6 +16,7 @@ export const token: any = {
     radius: borderRadius,
   },
   color: {
+    blue: colorBlue,
     neutral: colorNeutral,
     orange: colorOrange,
   },

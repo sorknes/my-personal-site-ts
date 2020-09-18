@@ -15,16 +15,26 @@ const Home: React.FC<IProps> = () => {
           borderRadius: token.border.radius[2],
           backgroundColor: token.color.neutral.TINT_0,
         }}>
-        Hello world!
+        Hello world, black!
+      </div>
+      <div
+        style={{
+          padding: token.space.component[2],
+          marginBottom: token.space.layout[6],
+          color: token.color.neutral.TINT_100,
+          borderRadius: token.border.radius[2],
+          backgroundColor: token.color.orange.TINT_50,
+        }}>
+        Hello world, orange!
       </div>
       <div
         style={{
           padding: token.space.component[2],
           color: token.color.neutral.TINT_100,
           borderRadius: token.border.radius[2],
-          backgroundColor: token.color.orange.TINT_50,
+          backgroundColor: token.color.blue.TINT_50,
         }}>
-        Hello world!
+        Hello world, blue!
       </div>
     </React.Fragment>
   )
