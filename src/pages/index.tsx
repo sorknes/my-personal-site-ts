@@ -22,7 +22,7 @@ const Home: React.FC<IProps> = () => {
           padding: token.space.component[2],
           color: token.color.neutral.TINT_100,
           borderRadius: token.border.radius[2],
-          backgroundColor: token.color.neutral.TINT_0,
+          backgroundColor: token.color.orange.TINT_50,
         }}>
         Hello world!
       </div>
