@@ -9,8 +9,9 @@ const Home: React.FC<IProps> = () => {
     <div
       style={{
         padding: token.space[2],
-        backgroundColor: token.color.neutral.TINT_0,
         color: token.color.neutral.TINT_100,
+        borderRadius: token.border.radius[2],
+        backgroundColor: token.color.neutral.TINT_0,
       }}>
       Hello world!
     </div>
