@@ -6,7 +6,8 @@
 
 import borderRadius from "./border-radius"
 import colorNeutral from "./color-neutral"
-import space from "./space"
+import spaceComponent from "./space-component"
+import spaceLayout from "./space-layout"
 
 export const token: any = {
   border: {
@@ -15,5 +16,8 @@ export const token: any = {
   color: {
     neutral: colorNeutral,
   },
-  space: space,
+  space: {
+    component: spaceComponent,
+    layout: spaceLayout,
+  },
 }

@@ -6,15 +6,27 @@ export interface IProps {}
 
 const Home: React.FC<IProps> = () => {
   return (
-    <div
-      style={{
-        padding: token.space[2],
-        color: token.color.neutral.TINT_100,
-        borderRadius: token.border.radius[2],
-        backgroundColor: token.color.neutral.TINT_0,
-      }}>
-      Hello world!
-    </div>
+    <React.Fragment>
+      <div
+        style={{
+          padding: token.space.component[2],
+          marginBottom: token.space.layout[6],
+          color: token.color.neutral.TINT_100,
+          borderRadius: token.border.radius[2],
+          backgroundColor: token.color.neutral.TINT_0,
+        }}>
+        Hello world!
+      </div>
+      <div
+        style={{
+          padding: token.space.component[2],
+          color: token.color.neutral.TINT_100,
+          borderRadius: token.border.radius[2],
+          backgroundColor: token.color.neutral.TINT_0,
+        }}>
+        Hello world!
+      </div>
+    </React.Fragment>
   )
 }
 
