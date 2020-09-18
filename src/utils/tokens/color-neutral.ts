@@ -4,7 +4,7 @@
  * @category Token
  */
 
-const colorNeutral: object = {
+const colorNeutral: any = {
   TINT_100: "#FFFFFF",
   TINT_90: "#F2F2F2",
   TINT_80: "#D9D9D9",
