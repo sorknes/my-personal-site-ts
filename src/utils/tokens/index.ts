@@ -5,6 +5,8 @@
  */
 
 import borderRadius from "./border-radius"
+import breakpoint from "./breakpoints"
+import breakpoints from "./breakpoints"
 import colorBlue from "./color-blue"
 import colorNeutral from "./color-neutral"
 import colorOrange from "./color-orange"
@@ -15,6 +17,7 @@ export const token: any = {
   border: {
     radius: borderRadius,
   },
+  breakpoint: breakpoint,
   color: {
     blue: colorBlue,
     neutral: colorNeutral,
