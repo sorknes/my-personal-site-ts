@@ -2,8 +2,6 @@ import * as React from "react"
 
 import Layout from "../components/Layout/Layout"
 
-import { token } from "../utils/tokens/index"
-
 import { Styled } from "./index.style"
 
 export interface IProps {}
