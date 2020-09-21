@@ -9,7 +9,7 @@ import { token } from "../tokens/index"
 const minWidthQuery = (minWidth: string) => `@media (min-width: ${minWidth})`
 const maxWidthQuery = (maxWidth: string) => `@media (max-width: ${maxWidth})`
 
-export const mediaMin: object = {
+export const mediaMin: any = {
   CUSTOM: minWidthQuery,
   VALUE_0: minWidthQuery(token.breakpoint[0]),
   VALUE_1: minWidthQuery(token.breakpoint[1]),
@@ -20,7 +20,7 @@ export const mediaMin: object = {
   VALUE_6: minWidthQuery(token.breakpoint[6]),
 }
 
-export const mediaMax: object = {
+export const mediaMax: any = {
   CUSTOM: maxWidthQuery,
   VALUE_0: maxWidthQuery(token.breakpoint[0]),
   VALUE_1: maxWidthQuery(token.breakpoint[1]),
