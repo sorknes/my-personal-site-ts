@@ -5,13 +5,13 @@
  */
 
 const breakpoint: Array<string> = [
-  "0",
-  "480px",
-  "768px",
-  "1024px",
-  "1280px",
-  "1366px",
-  "1920",
+  "0", // XXS
+  "480px", // XS
+  "768px", // S
+  "1024px", // M
+  "1280px", // L
+  "1366px", // XL
+  "1920px", // XXL
 ]
 
 export default breakpoint
