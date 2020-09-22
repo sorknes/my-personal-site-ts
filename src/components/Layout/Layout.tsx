@@ -2,6 +2,8 @@ import * as React from "react"
 
 import SEO from "../Seo/Seo"
 
+import { Styled } from "./Layout.style"
+
 export interface IProps {
   /** Children */
   children: React.ReactNode
@@ -11,11 +13,11 @@ export interface IProps {
 
 const Layout: React.FC<IProps> = ({ children, title }) => {
   return (
-    <React.Fragment>
+    <Styled.Layout>
       <SEO title={title} />
 
       {children}
-    </React.Fragment>
+    </Styled.Layout>
   )
 }
 
