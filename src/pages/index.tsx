@@ -12,6 +12,7 @@ const Home: React.FC<IProps> = () => {
       <Styled.IndexContent>Hello world, 1!</Styled.IndexContent>
       <Styled.IndexContent>Hello world, 2!</Styled.IndexContent>
       <Styled.IndexContent>Hello world, 3!</Styled.IndexContent>
+      <Styled.IndexContent>Hello world, 4!</Styled.IndexContent>
     </Layout>
   )
 }
