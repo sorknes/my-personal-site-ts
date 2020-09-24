@@ -2,6 +2,8 @@ import * as React from "react"
 
 import SEO from "../Seo/Seo"
 
+import GlobalStyle from "../../utils/style/GlobalStyle"
+
 import { Styled } from "./Layout.style"
 
 export interface IProps {
@@ -15,6 +17,8 @@ const Layout: React.FC<IProps> = ({ children, title }) => {
   return (
     <Styled.Layout>
       <SEO title={title} />
+
+      <GlobalStyle />
 
       {children}
     </Styled.Layout>
