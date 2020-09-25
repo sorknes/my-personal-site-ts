@@ -24,36 +24,34 @@ const Container = styled.div<IProps>`
   margin-bottom: ${token.space.layout[5]};
   margin-left: auto;
   display: grid;
+  grid-gap: ${props => (props.noGap ? 0 : token.space.layout[5])};
   grid-template-columns: ${props =>
     props.columns === 1
-      ? "minmax(0, 1fr)"
+      ? "1fr"
       : props.columns === 2
-      ? "minmax(0, 1fr)"
+      ? "1fr"
       : props.columns === 3
-      ? "minmax(0, 1fr)"
+      ? "1fr"
       : props.columns === 4
-      ? "minmax(0, 1fr)"
+      ? "1fr"
       : null};
-  grid-gap: ${props => (props.noGap ? 0 : token.space.layout[5])};
 
   ${mediaMin.S} {
     grid-template-columns: ${props =>
       props.columns === 1
-        ? "minmax(0, 1fr)"
+        ? "1fr"
         : props.columns === 2
-        ? "minmax(0, 1fr) minmax(0, 1fr)"
+        ? "repeat(2, 1fr)"
         : props.columns === 3
-        ? "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)"
+        ? "repeat(3, 1fr)"
         : props.columns === 4
-        ? "minmax(0, 1fr) minmax(0, 1fr)"
+        ? "repeat(2, 1fr)"
         : null};
   }
 
   ${mediaMin.M} {
     grid-template-columns: ${props =>
-      props.columns === 4
-        ? "minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)"
-        : null};
+      props.columns === 4 ? "repeat(4, 1fr)" : null};
   }
 `
 
