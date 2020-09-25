@@ -2,9 +2,9 @@ import * as React from "react"
 
 import SEO from "../Seo/Seo"
 
-import GlobalStyle from "../../utils/style/GlobalStyle"
-
 import { Styled } from "./Layout.style"
+import GlobalStyle from "../../utils/style/GlobalStyle"
+import GridLines from "../GridLines/GridLines"
 
 export interface IProps {
   /** Children */
@@ -20,11 +20,16 @@ const Layout: React.FC<IProps> = ({ children, title }) => {
 
       <GlobalStyle />
 
+      <GridLines>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </GridLines>
+
       {children}
     </Styled.Layout>
   )
 }
-
-Layout.defaultProps = {}
 
 export default Layout
