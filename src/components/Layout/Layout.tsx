@@ -5,6 +5,7 @@ import SEO from "../Seo/Seo"
 import { Styled } from "./Layout.style"
 import GlobalStyle from "../../utils/style/GlobalStyle"
 import GridLines from "../GridLines/GridLines"
+import Cursor from "../Cursor/Cursor"
 
 export interface IProps {
   /** Children */
@@ -28,6 +29,8 @@ const Layout: React.FC<IProps> = ({ children, title }) => {
       </GridLines>
 
       {children}
+
+      <Cursor />
     </Styled.Layout>
   )
 }

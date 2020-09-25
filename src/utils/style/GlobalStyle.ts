@@ -23,6 +23,11 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
+  html *,
+  body * {
+    cursor: none;
+  }
+
   body {
     padding: 0;
     margin: 0;

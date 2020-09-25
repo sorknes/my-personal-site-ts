@@ -15,8 +15,12 @@ const Home: React.FC<IProps> = () => {
       </Container>
 
       <Container columns={2}>
-        <Styled.IndexContent>Hello world, 2 column!</Styled.IndexContent>
-        <Styled.IndexContent>Hello world, 2 column!</Styled.IndexContent>
+        <Styled.IndexContent>
+          Hello world, 2 column! - <a href="">Link</a>
+        </Styled.IndexContent>
+        <Styled.IndexContent>
+          Hello world, 2 column! - <a href="">Link</a>
+        </Styled.IndexContent>
       </Container>
 
       <Container columns={3}>
