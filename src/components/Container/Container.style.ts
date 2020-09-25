@@ -24,7 +24,6 @@ const Container = styled.div<IProps>`
   margin-bottom: ${token.space.layout[5]};
   margin-left: auto;
   display: grid;
-  grid-gap: ${props => (props.noGap ? 0 : token.space.layout[5])};
   grid-template-columns: ${props =>
     props.columns === 1
       ? "1fr"
