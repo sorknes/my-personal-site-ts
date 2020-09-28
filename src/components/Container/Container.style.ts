@@ -42,7 +42,7 @@ const Container = styled.div<IProps>`
         : props.columns === 2
         ? "repeat(2, 1fr)"
         : props.columns === 3
-        ? "repeat(3, 1fr)"
+        ? "repeat(2, 1fr)"
         : props.columns === 4
         ? "repeat(2, 1fr)"
         : null};
@@ -50,7 +50,25 @@ const Container = styled.div<IProps>`
 
   ${mediaMin.M} {
     grid-template-columns: ${props =>
-      props.columns === 4 ? "repeat(4, 1fr)" : null};
+      props.columns === 3
+        ? "repeat(3, 1fr)"
+        : props.columns === 4
+        ? "repeat(4, 1fr)"
+        : null};
+  }
+
+  div {
+    ${mediaMin.S} {
+      &:first-child {
+        grid-column: ${props => props.columns === 3 && "span 3"};
+      }
+    }
+
+    ${mediaMin.M} {
+      &:first-child {
+        grid-column: ${props => props.columns === 3 && "span 1"};
+      }
+    }
   }
 `
 
