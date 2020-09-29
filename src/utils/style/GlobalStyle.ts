@@ -3,14 +3,6 @@ import { createGlobalStyle } from "styled-components"
 import { token } from "../../utils/tokens"
 
 const GlobalStyle = createGlobalStyle`
-  html {
-    font-family: arial;
-    font-weight: 400;
-    font-size: 16px;
-    color: ${token.color.neutral.TINT_10};
-    box-sizing: border-box;
-  }
-
   /**
    * WHAT IS THIS?
    *
@@ -23,9 +15,22 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
 
+  html,
+  body {
+    cursor: none;
+  }
+
   html *,
   body * {
     cursor: none;
+  }
+
+  html {
+    font-family: arial;
+    font-weight: 400;
+    font-size: 16px;
+    color: ${token.color.neutral.TINT_10};
+    box-sizing: border-box;
   }
 
   body {
