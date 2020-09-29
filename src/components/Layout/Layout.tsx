@@ -16,22 +16,24 @@ export interface IProps {
 
 const Layout: React.FC<IProps> = ({ children, title }) => {
   return (
-    <Styled.Layout>
-      <SEO title={title} />
+    <React.Fragment>
+      <Styled.Layout>
+        <SEO title={title} />
 
-      <GlobalStyle />
+        <GlobalStyle />
 
-      <GridLines>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </GridLines>
+        <GridLines>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </GridLines>
 
-      {children}
+        {children}
+      </Styled.Layout>
 
       <Cursor />
-    </Styled.Layout>
+    </React.Fragment>
   )
 }
 
