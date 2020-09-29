@@ -76,12 +76,6 @@ const Cursor: React.FC<IProps> = () => {
 
   return (
     <React.Fragment>
-      <Styled.Cursor
-        className={`cursor ${clicked === true && `cursor--clicked`} ${
-          hidden === true && `cursor--hidden`
-        } ${linkHovered === true && `cursor--link-hovered`}`}
-        style={{ left: `${position.x}px`, top: `${position.y}px` }}
-      />
       <Styled.TrailingCursor
         className={`cursor ${clicked === true && `cursor--clicked`} ${
           hidden === true && `cursor--hidden`
@@ -90,6 +84,12 @@ const Cursor: React.FC<IProps> = () => {
           left: `${trailingPosition.x}px`,
           top: `${trailingPosition.y}px`,
         }}
+      />
+      <Styled.Cursor
+        className={`cursor ${clicked === true && `cursor--clicked`} ${
+          hidden === true && `cursor--hidden`
+        } ${linkHovered === true && `cursor--link-hovered`}`}
+        style={{ left: `${position.x}px`, top: `${position.y}px` }}
       />
     </React.Fragment>
   )
