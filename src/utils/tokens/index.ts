@@ -11,6 +11,9 @@ import colorNeutral from "./color-neutral"
 import colorOrange from "./color-orange"
 import spaceComponent from "./space-component"
 import spaceLayout from "./space-layout"
+import transitionDuration from "./transition-duration"
+import transitionTiming from "./transition-timing"
+import zIndex from "./z-index"
 
 export const token: any = {
   border: {
@@ -26,4 +29,9 @@ export const token: any = {
     component: spaceComponent,
     layout: spaceLayout,
   },
+  transition: {
+    duration: transitionDuration,
+    timing: transitionTiming,
+  },
+  zIndex: zIndex,
 }
