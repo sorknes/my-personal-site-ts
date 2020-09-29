@@ -15,6 +15,8 @@ const Cursor: React.FC<IProps> = () => {
   if (typeof navigator !== "undefined" && isMobile()) return null
 
   const [position, setPosition] = React.useState({ x: 0, y: 0 })
+  const [trailingPosition, setTrailingPosition] = React.useState({ x: 0, y: 0 })
+
   const [clicked, setClicked] = React.useState(false)
   const [linkHovered, setLinkHovered] = React.useState(false)
   const [hidden, setHidden] = React.useState(false)
@@ -43,6 +45,10 @@ const Cursor: React.FC<IProps> = () => {
 
   const onMouseMove = (e: any) => {
     setPosition({ x: e.clientX, y: e.clientY })
+
+    setTimeout(() => {
+      setTrailingPosition({ x: e.clientX, y: e.clientY })
+    }, 100)
   }
 
   const onMouseDown = () => {
@@ -69,12 +75,23 @@ const Cursor: React.FC<IProps> = () => {
   }
 
   return (
-    <Styled.Cursor
-      className={`cursor ${clicked === true && `cursor--clicked`} ${
-        hidden === true && `cursor--hidden`
-      } ${linkHovered === true && `cursor--link-hovered`}`}
-      style={{ left: `${position.x}px`, top: `${position.y}px` }}
-    />
+    <React.Fragment>
+      <Styled.Cursor
+        className={`cursor ${clicked === true && `cursor--clicked`} ${
+          hidden === true && `cursor--hidden`
+        } ${linkHovered === true && `cursor--link-hovered`}`}
+        style={{ left: `${position.x}px`, top: `${position.y}px` }}
+      />
+      <Styled.TrailingCursor
+        className={`cursor ${clicked === true && `cursor--clicked`} ${
+          hidden === true && `cursor--hidden`
+        } ${linkHovered === true && `cursor--link-hovered`}`}
+        style={{
+          left: `${trailingPosition.x}px`,
+          top: `${trailingPosition.y}px`,
+        }}
+      />
+    </React.Fragment>
   )
 }
 

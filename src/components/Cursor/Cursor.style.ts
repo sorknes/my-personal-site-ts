@@ -1,69 +1,48 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 import { token } from "../../utils/tokens"
 
 interface IProps {}
 
-const Cursor = styled.div<IProps>`
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const CommonStyle = css`
   position: fixed;
+  border-radius: ${token.border.radius[6]};
   pointer-events: none;
-  border: 1px solid ${token.color.orange.TINT_50};
-  border-radius: 100%;
   transform: translate(-50%, -50%);
-  transition: all 300ms ease-in-out;
-  transition-property: opacity, transform;
-  z-index: 9999;
+  transition: all ${token.transition.duration[3]} ${token.transition.timing[3]};
+  transition-property: transform;
+  z-index: ${token.zIndex[6]};
+`
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    border-radius: 100%;
-    transition: all 300ms ease-in-out;
-  }
+const Cursor = styled.div<IProps>`
+  width: 40px;
+  height: 40px;
+  border: 1px solid ${token.color.orange.TINT_50};
 
-  &::before {
-    width: 20px;
-    height: 20px;
-    background-color: ${token.color.orange.TINT_50};
-  }
-
-  &::after {
-    width: 8px;
-    height: 8px;
-    border: 2px solid white;
-  }
+  ${CommonStyle};
 
   &.cursor--hidden {
     opacity: 0;
   }
 
   &.cursor--link-hovered {
-    &::before {
-      width: 32px;
-      height: 32px;
-    }
-
-    &::after {
-      width: 0;
-      height: 0;
-    }
+    transform: translate(-50%, -50%) scale(1.25);
   }
 
   &.cursor--clicked {
-    &::after {
-      width: 30px;
-      height: 30px;
-      background-color: ${token.color.neutral.TINT_100};
-    }
+    transform: translate(-50%, -50%) scale(0.9);
   }
+`
+
+const TrailingCursor = styled.div<IProps>`
+  width: 4px;
+  height: 4px;
+  background-color: ${token.color.neutral.TINT_50};
+
+  ${CommonStyle};
 `
 
 export const Styled = {
   Cursor,
+  TrailingCursor,
 }
