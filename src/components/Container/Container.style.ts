@@ -15,11 +15,7 @@ interface IProps {
 const Container = styled.div<IProps>`
   width: ${props => (props.width === "fluid" ? "100%" : "90%")};
   max-width: ${props =>
-    props.width === "fluid"
-      ? "100%"
-      : props.width === "fixed"
-      ? token.breakpoint[4]
-      : null};
+    props.width === "fluid" ? "100%" : props.width === "fixed" ? "90%" : null};
   margin-right: auto;
   margin-bottom: ${token.space.layout[5]};
   margin-left: auto;
@@ -49,6 +45,12 @@ const Container = styled.div<IProps>`
   }
 
   ${mediaMin.M} {
+    max-width: ${props =>
+      props.width === "fluid"
+        ? "100%"
+        : props.width === "fixed"
+        ? "66.6666667%"
+        : null};
     grid-template-columns: ${props =>
       props.columns === 3
         ? "repeat(3, 1fr)"

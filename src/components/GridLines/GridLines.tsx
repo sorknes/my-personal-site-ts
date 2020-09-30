@@ -2,13 +2,17 @@ import * as React from "react"
 
 import { Styled } from "./GridLines.style"
 
-export interface IProps {
-  /** Children */
-  children: React.ReactNode
-}
+export interface IProps {}
 
-const GridLines: React.FC<IProps> = ({ children }) => {
-  return <Styled.GridLines aria-hidden="true">{children}</Styled.GridLines>
+const GridLines: React.FC<IProps> = () => {
+  return (
+    <Styled.GridLines aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </Styled.GridLines>
+  )
 }
 
 export default GridLines
