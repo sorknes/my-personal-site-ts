@@ -10,7 +10,7 @@ export interface IProps {}
 const Home: React.FC<IProps> = () => {
   return (
     <Layout title="Home">
-      <Container columns={1}>
+      {/* <Container columns={1}>
         <Styled.IndexContent>Hello world, 1 column!</Styled.IndexContent>
       </Container>
 
@@ -56,7 +56,9 @@ const Home: React.FC<IProps> = () => {
         <Styled.IndexContent>Hello world, 4 column!</Styled.IndexContent>
         <Styled.IndexContent>Hello world, 4 column!</Styled.IndexContent>
         <Styled.IndexContent>Hello world, 4 column!</Styled.IndexContent>
-      </Container>
+      </Container> */}
+
+      <div style={{ height: "2000px" }} />
     </Layout>
   )
 }
