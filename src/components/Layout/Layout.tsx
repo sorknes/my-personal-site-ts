@@ -5,6 +5,8 @@ import SEO from "../Seo/Seo"
 import { Styled } from "./Layout.style"
 import GlobalStyle from "../../utils/style/GlobalStyle"
 import GridLines from "../GridLines/GridLines"
+import Header from "../Header/Header"
+import Nav from "../Nav/Nav"
 import Cursor from "../Cursor/Cursor"
 
 export interface IProps {
@@ -15,6 +17,14 @@ export interface IProps {
 }
 
 const Layout: React.FC<IProps> = ({ children, title }) => {
+  const [isLoaded, setIsLoaded] = React.useState(false)
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsLoaded(true)
+    }, 3000)
+  }, [])
+
   return (
     <React.Fragment>
       <Styled.Layout>
@@ -22,17 +32,34 @@ const Layout: React.FC<IProps> = ({ children, title }) => {
 
         <GlobalStyle />
 
-        <GridLines>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </GridLines>
+        {isLoaded ? (
+          <React.Fragment>
+            <GridLines />
 
-        {children}
+            <Header>
+              <div>logo</div>
+            </Header>
+
+            <Nav animate="visible" />
+
+            {children}
+
+            <Cursor />
+          </React.Fragment>
+        ) : (
+          <div
+            style={{
+              width: "100vw",
+              height: "100vh",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "white",
+            }}>
+            loading...
+          </div>
+        )}
       </Styled.Layout>
-
-      <Cursor />
     </React.Fragment>
   )
 }
