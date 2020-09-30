@@ -24,6 +24,7 @@ const Cursor: React.FC<IProps> = () => {
   React.useEffect(() => {
     addEventListeners()
     handleLinkHoverEvents()
+    handleButtonHoverEvents()
     return () => removeEventListeners()
   }, [])
 
@@ -69,6 +70,13 @@ const Cursor: React.FC<IProps> = () => {
 
   const handleLinkHoverEvents = () => {
     document.querySelectorAll("a").forEach(el => {
+      el.addEventListener("mouseover", () => setLinkHovered(true))
+      el.addEventListener("mouseout", () => setLinkHovered(false))
+    })
+  }
+
+  const handleButtonHoverEvents = () => {
+    document.querySelectorAll("button").forEach(el => {
       el.addEventListener("mouseover", () => setLinkHovered(true))
       el.addEventListener("mouseout", () => setLinkHovered(false))
     })
