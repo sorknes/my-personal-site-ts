@@ -40,7 +40,7 @@ const Layout: React.FC<IProps> = ({ children, title }) => {
               <div>logo</div>
             </Header>
 
-            <Nav animate="visible" />
+            <Nav />
 
             {children}
 
