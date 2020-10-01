@@ -9,6 +9,7 @@ import breakpoints from "./breakpoints"
 import colorBlue from "./color-blue"
 import colorNeutral from "./color-neutral"
 import colorOrange from "./color-orange"
+import fontFamily from "./font-family"
 import spaceComponent from "./space-component"
 import spaceLayout from "./space-layout"
 import transitionDuration from "./transition-duration"
@@ -24,6 +25,9 @@ export const token: any = {
     blue: colorBlue,
     neutral: colorNeutral,
     orange: colorOrange,
+  },
+  font: {
+    family: fontFamily,
   },
   space: {
     component: spaceComponent,
