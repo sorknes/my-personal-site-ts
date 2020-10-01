@@ -1,14 +1,25 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 import { token } from "../../utils/tokens"
 
 interface IProps {}
 
-const Header = styled.header<IProps>`
+const variants = {
+  hidden: { top: "-100px" },
+  visible: {
+    top: "0px",
+    transition: { delay: 0, duration: 0.5, ease: "easeInOut" },
+  },
+}
+
+const Header = styled(motion.header).attrs(() => ({
+  initial: "hidden",
+  variants,
+}))`
   width: 100%;
   height: 100px;
   position: fixed;
-  top: 0;
   display: grid;
   align-items: center;
   grid-template-columns: 2fr;

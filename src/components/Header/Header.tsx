@@ -8,7 +8,7 @@ export interface IProps {
 }
 
 const Header: React.FC<IProps> = ({ children }) => {
-  return <Styled.Header>{children}</Styled.Header>
+  return <Styled.Header animate="visible">{children}</Styled.Header>
 }
 
 export default Header
