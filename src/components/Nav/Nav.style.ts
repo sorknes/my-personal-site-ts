@@ -9,7 +9,7 @@ const variants = {
   hidden: { top: "-60px" },
   visible: {
     top: "99px",
-    transition: { delay: 0.5, duration: 0.75, type: "spring", bounce: 0.5 },
+    transition: { delay: 0.25, duration: 0.5, ease: "easeInOut" },
   },
 }
 

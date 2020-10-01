@@ -2,14 +2,11 @@ import * as React from "react"
 
 import { Styled } from "./Nav.style"
 
-export interface IProps {
-  /** Framer motion animate */
-  animate?: any
-}
+export interface IProps {}
 
-const Nav: React.FC<IProps> = ({ animate }) => {
+const Nav: React.FC<IProps> = () => {
   return (
-    <Styled.Nav animate={animate}>
+    <Styled.Nav animate="visible">
       <Styled.NavButton>
         <div>
           <span></span>
