@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-family: arial;
+    font-family: ${token.font.family.PRIMARY};
     font-weight: 400;
     font-size: 16px;
     color: ${token.color.neutral.TINT_10};
