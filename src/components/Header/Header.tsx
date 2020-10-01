@@ -2,13 +2,16 @@ import * as React from "react"
 
 import { Styled } from "./Header.style"
 
-export interface IProps {
-  /** Children */
-  children: React.ReactNode
-}
+import Logo from "../Logo/Logo"
 
-const Header: React.FC<IProps> = ({ children }) => {
-  return <Styled.Header animate="visible">{children}</Styled.Header>
+export interface IProps {}
+
+const Header: React.FC<IProps> = () => {
+  return (
+    <Styled.Header animate="visible">
+      <Logo />
+    </Styled.Header>
+  )
 }
 
 export default Header
