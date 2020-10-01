@@ -1,11 +1,23 @@
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
 import { token } from "../../utils/tokens"
 import { mediaMin } from "../../utils/mixins/mixMediaQuery"
 
 interface IProps {}
 
-const GridLines = styled.div<IProps>`
+const variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { delay: 0, duration: 0.5, ease: "easeInOut" },
+  },
+}
+
+const GridLines = styled(motion.div).attrs(() => ({
+  initial: "hidden",
+  variants,
+}))`
   width: 100%;
   max-width: 90%;
   height: 100vh;

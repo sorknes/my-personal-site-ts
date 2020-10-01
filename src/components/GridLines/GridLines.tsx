@@ -6,7 +6,7 @@ export interface IProps {}
 
 const GridLines: React.FC<IProps> = () => {
   return (
-    <Styled.GridLines aria-hidden="true">
+    <Styled.GridLines animate="visible" aria-hidden="true">
       <span></span>
       <span></span>
       <span></span>
