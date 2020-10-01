@@ -36,9 +36,7 @@ const Layout: React.FC<IProps> = ({ children, title }) => {
           <React.Fragment>
             <GridLines />
 
-            <Header>
-              <div>logo</div>
-            </Header>
+            <Header />
 
             <Nav />
 
