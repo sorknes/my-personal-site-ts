@@ -19,6 +19,7 @@ const Header = styled(motion.header).attrs(() => ({
 }))`
   width: 100%;
   height: 100px;
+  padding: 0 ${token.space.component[10]};
   position: fixed;
   display: grid;
   align-items: center;
