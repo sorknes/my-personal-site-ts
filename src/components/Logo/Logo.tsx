@@ -9,9 +9,9 @@ const Logo: React.FC<IProps> = () => {
     <Styled.LogoLink to="/">
       <Styled.Logo>
         <span>K</span>
-        <Styled.LogoSpan animate="hidden">nut</Styled.LogoSpan>
+        <Styled.LogoSpan animate="hiddenSpan">nut</Styled.LogoSpan>
         <span>S</span>
-        <Styled.LogoSpan animate="hidden">orknes</Styled.LogoSpan>
+        <Styled.LogoSpan animate="hiddenSpan">orknes</Styled.LogoSpan>
       </Styled.Logo>
     </Styled.LogoLink>
   )
